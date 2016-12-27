@@ -20,7 +20,7 @@ class DB
     {
         $sth = $this->dbh->prepare($sql);
         if (true == $sth->execute($data)) {
-            return $sth->fetchAll();
+            return $sth->fetchAll(PDO::FETCH_ASSOC);
         } else {
             return false;
         }
