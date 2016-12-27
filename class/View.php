@@ -6,9 +6,7 @@ class View
 
     public function assign($name, $value)
     {
-        var_dump($value);
         $this->data[$name] = $value;
-        var_dump($this->data);
     }
 
     public function display($template)

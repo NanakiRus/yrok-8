@@ -9,7 +9,7 @@
 </head>
 <body>
     <article>
-        <h1><?php var_dump($this->data); echo $this->data['news'][0]['Header']; ?></h1>
+        <h1><?php echo $this->data['news'][0]['Header']; ?></h1>
         <p><?php echo $this->data['news'][0]['Text']; ?></p>
         <p><i><?php echo $this->data['news'][0]['Author']; ?></i></p>
     </article>
