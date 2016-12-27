@@ -8,10 +8,12 @@
     <title>Урок - 8</title>
 </head>
 <body>
-    <article>
-        <h1><?php echo $this->data['news'][0]['Header']; ?></h1>
-        <p><?php echo $this->data['news'][0]['Text']; ?></p>
-        <p><i><?php echo $this->data['news'][0]['Author']; ?></i></p>
-    </article>
+<article>
+    <?php foreach ($this->data['news'] as $article) : ?>
+        <h1><?php echo $article['Header']; ?></h1>
+        <p><?php echo $article['Text']; ?></p>
+        <p><i><?php echo $article['Author']; ?></i></p>
+    <?php endforeach; ?>
+</article>
 </body>
 </html>

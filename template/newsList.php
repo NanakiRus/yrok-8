@@ -8,14 +8,15 @@
     <title>Урок - 8</title>
 </head>
 <body>
-    <ul>
-        <?php foreach ($this->data['news'] as $arrs) : ?>
+<ul>
+    <?php foreach ($this->data['news'] as $arrs) : ?>
         <li>
-            <h2><a href="/obychenie/yrok-8/article.php?id=<?php echo $arrs['id']; ?>"><?php echo $arrs['Header']; ?></a></h2>
+            <h2><a href="/obychenie/yrok-8/article.php?id=<?php echo $arrs['id']; ?>"><?php echo $arrs['Header']; ?></a>
+            </h2>
             <?php echo $arrs['Text']; ?>
             <p><i><?php echo $arrs['Author']; ?></i></p>
         </li>
-        <?php endforeach; ?>
-    </ul>
+    <?php endforeach; ?>
+</ul>
 </body>
 </html>
