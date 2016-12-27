@@ -7,12 +7,9 @@ if (isset($_GET['id'])) {
 
     $query = 'SELECT * FROM News WHERE id=:id';
 
-
     $view = new View();
-    var_dump($db->query($query, [':id' => $_GET['id']]));
-    $asd = $view->assign('news', $db->query($query, [':id' => $_GET['id']]));
-
-    $view->display(__DIR__ . '/template/template.php');
+    $view->assign('news', $db->query($query, [':id' => $_GET['id']]));
+    $view->display(__DIR__ . '/template/newsArticle.php');
 } else {
     header("HTTP/1.0 404 Not Found");
     die();

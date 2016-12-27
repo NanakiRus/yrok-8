@@ -8,13 +8,6 @@
     <title>Урок - 8</title>
 </head>
 <body>
-<?php if (isset($_GET['id'])) :?>
-    <article>
-    <h1><?php echo $this->data['news'][0]['Header']; ?></h1>
-    <p><?php echo $this->data['news'][0]['Text']; ?></p>
-    <p><i><?php echo $this->data['news'][0]['Author']; ?></i></p>
-    </article>
-<?php else : ?>
     <ul>
         <?php foreach ($this->data['news'] as $arrs) : ?>
         <li>
@@ -24,6 +17,5 @@
         </li>
         <?php endforeach; ?>
     </ul>
-<?php endif; ?>
 </body>
 </html>

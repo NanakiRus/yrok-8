@@ -7,10 +7,6 @@ $db = new DB();
 
 $query = 'SELECT * FROM News ORDER BY id DESC';
 
-
-
 $view = new View();
-
 $view->assign('news', $db->query($query, []));
-
-$view->display(__DIR__ . '/template/template.php');
+$view->display(__DIR__ . '/template/newsList.php');
